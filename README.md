@@ -20,7 +20,7 @@ simplelogger is a simple Ruby file &amp; console message logger
     require 'simplelogger'
 
     options = {:file => 'lof_file_name', options ..}
-    log = SimpleLogger.new(options)
+    log = Simplelogger.new(options)
     log.info "message"
     log.warning "message"
     log.error "message"

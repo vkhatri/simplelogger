@@ -43,11 +43,11 @@ class Simplelogger
     @options = opts
     @color = Term::ANSIColor
     $stdout.sync = true
-    @hostname = ENV['HOSTNAME']
-    @user = Etc.getlogin
+    @hostname = ENV['HOSTNAME'] || 'unknown_hostname'
+    @user = Etc.getlogin || 'unknown_user'
 
     @time_format = opts[:time_format]
-    @program_name = opts[:program_name]
+    @program_name = opts[:program_name] || 'unknown_program'
     @console_style = opts[:console_style] || 'full'
     @enable_verbose = opts[:enable_verbose]
     @enable_debug = opts[:enable_debug]
